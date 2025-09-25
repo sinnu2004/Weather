@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PAROON</title>
+  <link rel="icon" type="image/png" href="/frontend/assets/Paroon-removebg-preview.png">  <!--For icon of Browser title-->
+  <link rel="stylesheet" href="/frontend/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="head">
+    <div id="logo_container">
+      <img id="logo" src="/frontend/assets/Paroon-removebg-preview.png" alt="logo">
+      <h1 id="name">PAROON</h1>
+    </div>
+    <div id="nav_container">
+      <nav>
+        <button id="current-location-btn"><h1>📍</h1></button>
+        <button id="theme-toggle"><h1 id="toggle">🌙</h1></button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <form id="search-form">
+      <input type="text" id="city-input" placeholder="Enter city name...">
+      <button type="submit">Search</button>
+      <button id="unit-toggle">°C/°F</button>
+    </form>
+    <!-- Recent Searches -->
+    <div class="searches" id="recent-searches">
+      <ul id="search-list"></ul>
+    </div>
+  </section>
+
+  <!-- City Dashboard -->
+  <section id="dashboard">
+    <h2>📊 City Dashboard</h2>
+    <div id="card_container">
+      <div id="current-weather" class="card">
+        <h3 id="city-name">--</h3>
+        <img id="weather-icon" alt="">
+        <p id="weather-desc">--</p>
+        <div class="card_container_data">
+          <p><strong>Temp:</strong> <span id="temp">--</span></p>
+          <p><strong>Humidity:</strong> <span id="humidity">--</span>%</p>
+          <p><strong>Wind:</strong> <span id="wind">--</span> km/h</p>
+          <p><strong>Pressure:</strong> <span id="pressure">--</span> hPa</p>
+        </div>
+        <div class="card_container_data">
+          <p><strong>sea-level:</strong> <span id="sea-level">--</span> hPa</p>
+          <p><strong>ground-level:</strong> <span id="grd-level">--</span> hPa</p>
+          <p><strong>Sunrise:</strong> <span id="sunrise">--</span> AM</p>
+          <p><strong>Sunset:</strong> <span id="sunset">--</span> PM</p>
+        </div>
+      </div>
+  </section>
+
+  <!-- Charts -->
+  <section id="chart" class="card">
+    <h2>5-Day Forecast</h2>
+    <canvas id="forecastChart"></canvas>
+  </section>
+
+  <section id="chart" class="card">
+    <h2>Hourly Forecast</h2>
+    <canvas id="hourlyChart"></canvas>
+  </section>
+
+  <!-- Weather Alert -->
+  <div id="alert-popup" class="hidden">
+    <p id="alert-message"></p>
+    <button onclick="closeAlert()">Close</button>
+  </div>
+
+  <script src="/frontend/script.js"></script>
+</body>
+</html>

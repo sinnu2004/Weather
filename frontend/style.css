@@ -1,0 +1,254 @@
+/* Global Styles */
+* { margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+  font-family: "Poppins", sans-serif; 
+}
+
+body {
+  background: url(https://i.pinimg.com/736x/9d/33/fa/9d33fada722dd1aefdb81c4c7654b8a3.jpg) no-repeat border-box content-box scroll;
+  background-size: cover;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Dark Mode */
+body.dark {
+  background: #1f1f20e5;
+  color: #f0f0f0;
+}
+
+/* dark body header Style*/
+body.dark header { 
+  background: #333; 
+  box-shadow: 4px 7px 5px 2px rgb(20, 17, 17); 
+}
+body.dark header:hover {
+  animation: rainbow-shadow 2s linear 0s infinite alternate;
+}
+
+/* hero section */
+
+body.dark #hero button {
+  background-color: #2e2b2b;
+}
+
+body.dark #search-list li{
+  background-color: #2e2b2b;
+  color: white;
+}
+
+/* Dark Style Dashboard section */
+
+/* dark body card containers styles */
+body.dark .card { 
+  background: #333; 
+  color: white;
+  box-shadow: 4px 7px 5px 2px rgb(20, 17, 17); 
+}
+body.dark .card:hover {
+  animation: rainbow-shadow 2s linear 0s infinite alternate;
+}
+body.dark #dashboard h2, body.dark .card #city-name, body.dark .card p strong , body.dark #chart h2{
+  color: white;
+}
+body.dark .card #weather-desc{
+  color: rgb(207, 197, 197);
+  margin-bottom: 5px;
+}
+body.dark .card img {
+  background : none;
+}
+
+/* only for dark mode */ 
+/* Rainbow glowing shadow */
+@keyframes rainbow-shadow {
+  0%   { box-shadow: 0 0 15px 3px red; }
+  50%  { box-shadow: 0 0 15px 3px green; }
+  100%  { box-shadow: 0 0 15px 3px blue; }
+}
+
+/*gradient shadows: */  
+@keyframes rainbow-blend {
+  0%   { box-shadow: 0 0 10px 3px red, 0 0 10px 3px orange, 0 0 10px 3px yellow; }
+  25%   { box-shadow: 0 0 10px 3px rgb(29, 184, 204), 0 0 10px 3px rgb(36, 140, 172), 0 0 10px 3px rgb(111, 180, 19); }
+  50%  { box-shadow: 0 0 10px 3px green, 0 0 10px 3px blue, 0 0 10px 3px indigo; }
+  75%   { box-shadow: 0 0 10px 3px rgb(171, 192, 49), 0 0 10px 3px orange, 0 0 10px 3px yellow; }
+  100% { box-shadow: 0 0 10px 3px violet, 0 0 10x 3px red, 0 0 10px 3px orange; }
+}
+
+
+/* light Mode */
+
+/* Header */
+header {
+  width: 70%;
+  background: linear-gradient(to right, rgb(32, 243, 243),rgb(90, 202, 236),rgb(133, 248, 252));
+  border-radius: 25px;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 5px 5px 5px 5px rgb(30, 172, 216);
+}
+#name {
+  color: #036be2;
+  margin: 2px;
+}
+header button {
+  margin-left: 10px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: none;
+  color: #333;
+}
+
+#logo_container {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  margin-left: 20px;
+}
+
+#logo {
+  height: 50px;
+  width: 50px;
+  margin-right: 5px;
+}
+#nav_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  margin-right: 20px;
+}
+
+/* Hero */
+#hero { 
+  margin: 20px; 
+  text-align: center; 
+}
+#search-form { 
+  display: flex; 
+  gap: 10px; 
+  justify-content: center; 
+}
+#search-form input { 
+  padding: 10px; 
+  border-radius: 8px; 
+  border: 1px solid #130707; 
+}
+#search-form button { 
+  padding: 10px 15px; 
+  background: #0f67ca;
+  color: white; 
+  border: none; 
+  border-radius: 8px; 
+}
+
+/* Dashboard */
+#dashboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#dashboard h2 {
+  color: rgb(67, 133, 138);
+}
+#city-name{
+  color: rgb(56, 84, 100);
+  text-transform: uppercase;
+}
+#card_container {
+  width: 100%;
+  display: flex;
+  
+}
+/* Cards */
+.card {
+  background: rgb(216, 237, 247);
+  padding: 20px;
+  margin: 15px;
+  border-radius: 12px;
+  box-shadow: 5px 5px 5px 5px rgb(11, 155, 160);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+.card_container_data {
+  width: 100%;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+}
+.card img { 
+  width: 80px; 
+  margin: 10px auto;
+  background-color: rgb(95, 149, 151);
+  border-radius: 25%;
+}
+#weather-desc{
+  font-weight: 800;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  color: rgb(48, 94, 105);
+}
+.card_container_data p strong {
+  color: rgba(62, 43, 107, 0.863);
+}
+
+
+/* Recent Searches */
+#recent-searches { 
+  margin-top: 15px;
+}
+#search-list { 
+  list-style: none; 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 10px; 
+  justify-content: center; 
+}
+#search-list li { 
+  background: rgb(222, 252, 249); 
+  padding: 5px 10px; 
+  border-radius: 6px; 
+  cursor: pointer; 
+}
+
+/* chart */
+
+#chart h2 {
+  color: rgb(48, 94, 105);
+}
+/* Alert Popup */
+#alert-popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: red;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  display: none;
+}
+
+/* Responsive */
+@media screen and (max-width: 560px) {
+  #search-form ,#hero , #dashboard , #chart , #alert-popup , #nav_container { 
+    flex-direction: column; 
+    width: auto;
+  }
+  header { 
+    width: auto;
+    flex-direction: row; 
+    gap: 10px;
+  }
+}
