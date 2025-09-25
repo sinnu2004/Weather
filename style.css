@@ -242,10 +242,7 @@ header button {
 }
 
 /* Responsive */
-/* Mobile view improvements */
 @media screen and (max-width: 570px) {
-
-  /* General reset for smaller devices */
   body {
     font-size: 14px;
     padding: 5px;
@@ -268,7 +265,7 @@ header button {
   }
 
   #logo {
-    width: 20px;   /* smaller logo */
+    width: 20px; 
     height: 20px;
   }
   #logo_container h1 {
@@ -319,9 +316,8 @@ header button {
 
   #chart {
     width: 80%;
-    overflow-x: auto; /* allow chart scroll if too wide */
+    overflow-x: auto;
   }
-
   #alert-popup {
     width: 90%;
     font-size: 14px;

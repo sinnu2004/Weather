@@ -90,7 +90,6 @@ function renderChart(id, labels, temps, label, type) {
   const ctx = document.getElementById(id).getContext("2d");
   if (id === "forecastChart" && forecastChart) forecastChart.destroy();
   if (id === "hourlyChart" && hourlyChart) hourlyChart.destroy();
-
   const chart = new Chart(ctx, {
     type: type,
     data: {
@@ -108,6 +107,9 @@ function renderChart(id, labels, temps, label, type) {
   if (id === "forecastChart") forecastChart = chart;
   if (id === "hourlyChart") hourlyChart = chart;
 }
+
+
+
 
 // Format Temperature
 function formatTemp(temp) {
