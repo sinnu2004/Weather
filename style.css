@@ -28,6 +28,7 @@ body.dark header {
 }
 body.dark header:hover {
   animation: rainbow-shadow 2s linear 0s infinite alternate;
+
 }
 
 /* hero section */
@@ -241,14 +242,89 @@ header button {
 }
 
 /* Responsive */
-@media screen and (max-width: 560px) {
-  #search-form ,#hero , #dashboard , #chart , #alert-popup , #nav_container { 
-    flex-direction: column; 
+/* Mobile view improvements */
+@media screen and (max-width: 570px) {
+
+  /* General reset for smaller devices */
+  body {
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  header {
+    height: 40px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+  }
+
+  #logo_container {
+    height: 40px;
+    width: auto;
+    align-items: center;
+    text-align: center;
+  }
+
+  #logo {
+    width: 20px;   /* smaller logo */
+    height: 20px;
+  }
+  #logo_container h1 {
+    font-size: small;
+  }
+
+  #nav_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  #nav_container h1 {
+    font-size: small;
+  }
+
+
+  #hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+  }
+
+  #search-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-self: center;
+    width: 80%;
+  }
+
+  #search-form button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
     width: auto;
   }
-  header { 
-    width: auto;
-    flex-direction: row; 
-    gap: 10px;
+  #dashboard {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  #chart {
+    width: 80%;
+    overflow-x: auto; /* allow chart scroll if too wide */
+  }
+
+  #alert-popup {
+    width: 90%;
+    font-size: 14px;
+    padding: 10px;
   }
 }
